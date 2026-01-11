@@ -17,7 +17,7 @@ jobs:
         run: |
           mkdir -p ir
           curl -L --fail \
-            https://www.ssec.wisc.edu/data/geo/images/globalir.jpg \
+            "https://gibs.earthdata.nasa.gov/image-download?TIME=2024-01-01&extent=-180,-90,180,90&epsg=4326&layers=VIIRS_SNPP_CorrectedReflectance_BandsM11-I2-I1&opacities=1&worldfile=false&format=image/png&width=3600&height=1800" \
             -o ir/latest.png
 
       - name: Commit and push if changed
